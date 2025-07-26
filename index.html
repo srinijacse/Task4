@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Internship Projects</h1>
+
+  <!-- Portfolio Website -->
+  <section id="portfolio">
+    <h2>Personal Portfolio</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h3>About Me</h3>
+      <p>Hello, I'm Srinija, a passionate web developer.</p>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li><a href = '#todo'>To-Do App with Local Storage</a></li>
+        <li><a href = '#products'>Product Listing Page with Filters</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: srinija@example.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </section>
+  </section>
+
+  <!-- To-Do List App -->
+  <section id="todo">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <!-- Product Listing Page -->
+  <section id="products">
+    <h2>Product Listing</h2>
+    <h3>Add New Product</h3>
+    <input type="text" id="prodName" placeholder="Name">
+    <input type="text" id="prodCategory" placeholder="Category (e.g. electronics)">
+    <input type="number" id="prodPrice" placeholder="Price">
+    <input type="number" step="0.1" id="prodRating" placeholder="Rating">
+    <button onclick="addProduct()">Add Product</button>
+    <h3>Filter by Category:</h3>
+    <select id="filter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+    </select>
+    <select id="sort" onchange="sortProducts()">
+      <option value="default">Default</option>
+      <option value="priceLow">Price: Low to High</option>
+      <option value="priceHigh">Price: High to Low</option>
+    </select>
+    <ul id="productList"></ul>
+    
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
